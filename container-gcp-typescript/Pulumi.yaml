@@ -1,0 +1,22 @@
+name: ${PROJECT}
+description: ${DESCRIPTION}
+runtime: nodejs
+template:
+  description: A containerized application running on GCP with Cloud Run
+  config:
+    gcp:project:
+      description: The GCP Project in which to deploy your resources
+    gcp:region:
+      description: The GCP cloud region in which to deploy Cloud Run
+      default: europe-west1
+    containerPort:
+      description: The port to expose on the container
+      default: 80
+    cpu:
+      description: The amount of CPU to allocate for the container
+      default: 1
+    memory:
+      description: The amount of memory to allocate for the container
+      default: 512Mi
+
+
